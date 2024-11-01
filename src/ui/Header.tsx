@@ -14,10 +14,6 @@ const StyledHeader = styled.header`
   background-size: cover;
   padding: 0 16.5rem 5.3rem 16.5rem;
   color: #fff;
-  /* 
-  h1 {
-    margin-top: -5rem;
-  } */
 `;
 
 const Theme = styled.div`

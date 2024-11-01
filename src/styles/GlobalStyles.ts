@@ -8,8 +8,10 @@ const GlobalStyles = createGlobalStyle`:root {
   --bg-color:#f4f6f8;
   --bg-color-2:#ffffff;
   --font-color: #19202d;
-  
-  
+
+  --btn2-bg-color: rgba(89, 100, 224, 0.1); 
+  --btn2-bg-hover-color: rgba(89, 100, 224, 0.35); 
+
   --image-grayscale: 0;
   --image-opacity: 100%;
 }
@@ -17,8 +19,9 @@ const GlobalStyles = createGlobalStyle`:root {
   --body-bg:#B8B9BC;
   --bg-color: #181c28;
   --bg-color-2:#19202d;
-  --font-color: #19202d;
-
+  --font-color: #ffffff;
+  --btn2-bg-color: rgba(255, 255, 255, 0.1);
+  --btn2-bg-hover-color:  rgba(255, 255, 255, 0.35);
 
 
 --image-grayscale: 10%;
@@ -33,6 +36,7 @@ const GlobalStyles = createGlobalStyle`:root {
 --light-grey: #f4f6f8;
 --grey: #9daec2;
 --dark-grey: #6e8098;
+
 
 
 
