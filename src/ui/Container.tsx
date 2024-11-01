@@ -2,10 +2,14 @@ import styled from "styled-components";
 import { StyledContainerProps } from "../Interfaces";
 
 const StyledContainer = styled.main`
-  width: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   min-width: 144rem;
-  height: 100vh;
+
   background-color: var(--bg-color);
+  padding-bottom: 11.2rem;
 `;
 
 function Container({ children }: StyledContainerProps) {

@@ -9,11 +9,14 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   min-height: 16.2rem;
+  width: 100%;
   background-image: url("../../public/img/Group 10.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 16.5rem 5.3rem 16.5rem;
   color: #fff;
+
+  margin-bottom: 11.8rem;
 `;
 
 const Theme = styled.div`

@@ -11,7 +11,7 @@ const Button = styled.button<Buttons>`
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.984rem;
-  width: 14.1rem;
+  min-width: 14.1rem;
   height: 4.8rem;
   border-radius: 5px;
   padding: 1.6rem 3.95rem;

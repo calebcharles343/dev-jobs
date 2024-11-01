@@ -14,14 +14,21 @@ const GlobalStyles = createGlobalStyle`:root {
 
   --image-grayscale: 0;
   --image-opacity: 100%;
+
+  --job-bg-color: #ffffff;
+
 }
 &.dark-mode{
   --body-bg:#B8B9BC;
   --bg-color: #181c28;
   --bg-color-2:#19202d;
+  
   --font-color: #ffffff;
+
   --btn2-bg-color: rgba(255, 255, 255, 0.1);
   --btn2-bg-hover-color:  rgba(255, 255, 255, 0.35);
+
+  --job-bg-color: #19202d;
 
 
 --image-grayscale: 10%;
