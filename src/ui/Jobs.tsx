@@ -24,7 +24,7 @@ function Jobs() {
   const { formData } = useFormData();
 
   useEffect(() => {
-    fetch("/public/data.json")
+    fetch("/src/data/data.json")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));
