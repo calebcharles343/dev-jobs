@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 interface Buttons {
-  type: "btn1" | "btn2";
+  ButtonType: "btn1" | "btn2";
 }
 
 const Button = styled.button<Buttons>`
@@ -18,8 +18,8 @@ const Button = styled.button<Buttons>`
   border: none;
   color: var(--white);
 
-  ${({ type }) =>
-    type === "btn1" &&
+  ${({ ButtonType }) =>
+    ButtonType === "btn1" &&
     css`
       background-color: var(--violet);
 
@@ -27,8 +27,8 @@ const Button = styled.button<Buttons>`
         background-color: var(--light-violet);
       }
     `};
-  ${({ type }) =>
-    type === "btn2" &&
+  ${({ ButtonType }) =>
+    ButtonType === "btn2" &&
     css`
       background-color: var(--btn2-bg-color);
 

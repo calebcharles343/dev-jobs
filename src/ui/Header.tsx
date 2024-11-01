@@ -60,6 +60,7 @@ function Header() {
           />
         </svg>
       </Theme>
+
       <SeachBar />
     </StyledHeader>
   );

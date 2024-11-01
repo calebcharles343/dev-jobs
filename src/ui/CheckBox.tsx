@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 // Define prop types for Checkbox
 interface CheckboxProps {
+  name: string; // Add `name` to the props
   checked: boolean;
-  onChange: () => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   label: string;
 }
 
