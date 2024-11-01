@@ -12,7 +12,7 @@ const StyledJobs = styled.div`
       31.53%
     );
   width: 111rem;
-  height: 100%;
+  min-height: 100vh;
   gap: 2.916666rem;
   margin-bottom: 5.6rem;
 `;
