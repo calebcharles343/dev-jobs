@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Heading from "./Heading";
 import ToggleSwitch from "./ToggleSwitch";
 import SeachBar from "./SeachBar";
+import headerBg from "../../public/img/header-bg.png";
 
 const StyledHeader = styled.header`
   position: relative;
@@ -10,7 +11,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   min-height: 16.2rem;
   width: 100%;
-  background-image: url("../../public/img/Group 10.png");
+  background-image: url(${headerBg});
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 16.5rem 5.3rem 16.5rem;
