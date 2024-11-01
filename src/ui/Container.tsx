@@ -5,7 +5,7 @@ const StyledContainer = styled.main`
   width: 100vh;
   min-width: 144rem;
   height: 100vh;
-  background-color: inherit;
+  background-color: var(--bg-color);
 `;
 
 function Container({ children }: StyledContainerProps) {

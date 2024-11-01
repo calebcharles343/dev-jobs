@@ -12,6 +12,8 @@ function DarkModeProvider({ children }: any) {
     "isDarkMode"
   );
 
+  // console.log(isDarkMode);
+
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark-mode");
@@ -20,6 +22,8 @@ function DarkModeProvider({ children }: any) {
       document.documentElement.classList.add("light-mode");
       document.documentElement.classList.remove("dark-mode");
     }
+
+    // console.log(document.documentElement.classList);
   }, [isDarkMode]);
 
   function toggleDarkMode() {

@@ -1,19 +1,19 @@
 import styled from "styled-components";
 import Heading from "./Heading";
 import ToggleSwitch from "./ToggleSwitch";
-import LightIcon from "../../public/icons/light-icon.svg";
-// import NightIcon from "../../public/icons/";
+import SeachBar from "./SeachBar";
 
 const StyledHeader = styled.header`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   min-height: 16.2rem;
   background-image: url("../../public/img/Group 10.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   padding: 0 16.5rem 5.3rem 16.5rem;
+  color: #fff;
   /* 
   h1 {
     margin-top: -5rem;
@@ -24,7 +24,7 @@ const Theme = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 3.6rem;
 `;
 
 function Header() {
@@ -64,6 +64,7 @@ function Header() {
           />
         </svg>
       </Theme>
+      <SeachBar />
     </StyledHeader>
   );
 }
