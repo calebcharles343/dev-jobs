@@ -4,6 +4,7 @@ import { useFormData } from "../context/FormDataContext";
 import styled from "styled-components";
 import Job from "./Job";
 import Button from "./Button";
+import { dataJS } from "../data/dataJS";
 
 const StyledJobs = styled.div`
   display: grid;
@@ -30,7 +31,9 @@ function Jobs() {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  const filteredData = data.filter((job) => {
+  let filteredData = data ? data : dataJS;
+
+  filteredData = data.filter((job) => {
     if (formData.fullTimeOnly && job.contract !== "Full Time") return false;
     if (formData.job && job.contract !== "Full Time") return false;
     return true;
