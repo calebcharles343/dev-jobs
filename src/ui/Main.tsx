@@ -8,12 +8,11 @@ const StyledContainer = styled.main`
   width: 100%;
   min-width: 144rem;
 
-  background-color: var(--bg-color);
   padding-bottom: 11.2rem;
 `;
 
-function Container({ children }: StyledContainerProps) {
+function Main({ children }: StyledContainerProps) {
   return <StyledContainer>{children}</StyledContainer>;
 }
 
-export default Container;
+export default Main;

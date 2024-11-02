@@ -1,20 +1,23 @@
 import GlobalStyles from "./styles/GlobalStyles";
-import Header from "./ui/Header";
-import Container from "./ui/Container";
 import { DarkModeProvider } from "./context/DarkModeContext";
-import Jobs from "./ui/Jobs";
-import { FormDataProvider } from "./context/FormDataContext";
+import AppLayout from "./ui/AppLayout";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Home from "./pages/home";
+import Details from "./pages/Details";
 
 function App() {
   return (
     <DarkModeProvider>
       <GlobalStyles />
-      <Container>
-        <FormDataProvider>
-          <Header />
-          <Jobs />
-        </FormDataProvider>
-      </Container>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<AppLayout />}>
+            <Route path="/" element={<Navigate to="home" />} />
+            <Route path="home" element={<Home />} />
+            <Route path="details" element={<Details />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </DarkModeProvider>
   );
 }
