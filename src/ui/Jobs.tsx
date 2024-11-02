@@ -32,7 +32,7 @@ function Jobs() {
   }, []);
 
   // let filteredData = data ? data : dataJS;
-  let filteredData = gitdataJS;
+  let filteredData = dataJS;
 
   filteredData = data.filter((job) => {
     if (formData.fullTimeOnly && job.contract !== "Full Time") return false;
