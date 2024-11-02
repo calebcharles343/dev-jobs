@@ -14,7 +14,6 @@ const StyledJobs = styled.div`
       31.53%
     );
   width: 111rem;
-  min-height: 113.2rem;
   gap: 2.916666rem;
   margin-bottom: 5.6rem;
   justify-content: start;
@@ -72,9 +71,11 @@ useEffect(() => {
           <Job job={job} />
         ))}
       </StyledJobs>
-      <Button ButtonType="btn1" onClick={handleSeeMoreBtn}>
-        {!seeMore ? "See less" : "Load more"}
-      </Button>
+      {displayedData.length > 12 ? (
+        <Button ButtonType="btn1" onClick={handleSeeMoreBtn}>
+          {!seeMore ? "See less" : "Load more"}
+        </Button>
+      ) : null}
     </>
   );
 }
