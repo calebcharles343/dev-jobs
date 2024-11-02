@@ -31,7 +31,8 @@ function Jobs() {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  let filteredData = data ? data : dataJS;
+  // let filteredData = data ? data : dataJS;
+  let filteredData = gitdataJS;
 
   filteredData = data.filter((job) => {
     if (formData.fullTimeOnly && job.contract !== "Full Time") return false;
