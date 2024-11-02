@@ -1,7 +1,7 @@
 // import { useEffect, useState } from "react";
 import { useState } from "react";
 import { DataType } from "../Interfaces";
-// import { useFormData } from "../context/FormDataContext";
+import { useFormData } from "../context/FormDataContext";
 import styled from "styled-components";
 import Job from "./Job";
 import Button from "./Button";
@@ -17,13 +17,14 @@ const StyledJobs = styled.div`
   min-height: 113.2rem;
   gap: 2.916666rem;
   margin-bottom: 5.6rem;
+  justify-content: start;
 `;
 
 function Jobs() {
   // const [data, setData] = useState<DataType[]>([]);
   const [seeMore, setSeeMore] = useState<boolean>(false);
   // const { formData, updateField, handleSubmit } = useFormData();
-  // const { formData } = useFormData();
+  const { formData } = useFormData();
   /*
 useEffect(() => {
   fetch("/src/data/data.json")
@@ -34,14 +35,27 @@ useEffect(() => {
 */
 
   // let filteredData = data ? data : dataJS;
-  let filteredData: DataType[] = dataJS;
-  console.log(filteredData);
+  let data: DataType[] = dataJS;
 
-  // filteredData = data.filter((job) => {
-  //   if (formData.fullTimeOnly && job.contract !== "Full Time") return false;
-  //   if (formData.job && job.contract !== "Full Time") return false;
-  //   return true;
-  // });
+  console.log(formData);
+
+  const filteredData = data.filter((job) => {
+    const isPosition = formData.job
+      ? job.position.toLowerCase().includes(formData.job.toLowerCase())
+      : true;
+
+    const isJobLocation = formData.country
+      ? job.location
+          .toLowerCase()
+          .includes(formData.country.toLowerCase().trim())
+      : true;
+
+    const isFullTime = formData.fullTimeOnly
+      ? job.contract === "Full Time"
+      : true;
+
+    return isPosition && isJobLocation && isFullTime;
+  });
 
   const displayedData = seeMore ? filteredData.slice(0, 12) : filteredData;
 
