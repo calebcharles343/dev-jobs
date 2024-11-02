@@ -72,6 +72,8 @@ const JobTextContainer = styled.div`
 `;
 
 function Job({ job }: Job) {
+  // console.log(job);
+
   return (
     <StyledJob>
       <Icon logoBg={job.logoBackground}>

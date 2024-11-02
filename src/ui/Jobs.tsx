@@ -23,24 +23,28 @@ function Jobs() {
   const [seeMore, setSeeMore] = useState<boolean>(false);
   // const { formData, updateField, handleSubmit } = useFormData();
   const { formData } = useFormData();
-
-  useEffect(() => {
-    fetch("/src/data/data.json")
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  /*
+useEffect(() => {
+  fetch("/src/data/data.json")
+  .then((response) => response.json())
+  .then((data) => setData(data))
+  .catch((error) => console.error("Error fetching data:", error));
+}, []);
+*/
 
   // let filteredData = data ? data : dataJS;
-  let filteredData = dataJS;
+  let filteredData: DataType[] = dataJS;
+  console.log(filteredData);
 
-  filteredData = data.filter((job) => {
-    if (formData.fullTimeOnly && job.contract !== "Full Time") return false;
-    if (formData.job && job.contract !== "Full Time") return false;
-    return true;
-  });
+  // filteredData = data.filter((job) => {
+  //   if (formData.fullTimeOnly && job.contract !== "Full Time") return false;
+  //   if (formData.job && job.contract !== "Full Time") return false;
+  //   return true;
+  // });
 
   const displayedData = seeMore ? filteredData.slice(0, 12) : filteredData;
+
+  console.log(displayedData);
 
   function handleSeeMoreBtn() {
     setSeeMore(!seeMore);

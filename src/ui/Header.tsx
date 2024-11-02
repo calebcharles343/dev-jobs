@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Heading from "./Heading";
 import ToggleSwitch from "./ToggleSwitch";
 import SeachBar from "./SeachBar";
-import headerBg from "../../public/img/header-bg.png";
+import headerBg from "../data/img/header-bg.png";
 
 const StyledHeader = styled.header`
   position: relative;
