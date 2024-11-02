@@ -6,8 +6,9 @@ import styled from "styled-components";
 import Job from "./Job";
 import Button from "./Button";
 import { dataJS } from "../data/dataJS";
+import { useNavigate } from "react-router-dom";
 
-const StyledJobs = styled.div`
+const StyledJobs = styled.ul`
   display: grid;
   grid-template-columns: minmax(35rem, 31.53%) minmax(35rem, 31.53%) minmax(
       35rem,
@@ -24,6 +25,7 @@ function Jobs() {
   const [seeMore, setSeeMore] = useState<boolean>(false);
   // const { formData, updateField, handleSubmit } = useFormData();
   const { formData } = useFormData();
+  const navigate = useNavigate();
   /*
 useEffect(() => {
   fetch("/src/data/data.json")
@@ -64,16 +66,24 @@ useEffect(() => {
     setSeeMore(!seeMore);
   }
 
+  const handleClick = (id: number) => {
+    navigate(`/detail/${id}`);
+  };
+
   return (
     <>
       <StyledJobs>
-        {displayedData.map((job) => (
-          <Job job={job} />
-        ))}
+        <StyledJobs>
+          {displayedData.map((job) => (
+            <li key={job.id} onClick={() => handleClick(job.id)}>
+              <Job job={job} />
+            </li>
+          ))}
+        </StyledJobs>
       </StyledJobs>
-      {displayedData.length > 12 ? (
+      {displayedData.length > 11 ? (
         <Button ButtonType="btn1" onClick={handleSeeMoreBtn}>
-          {!seeMore ? "See less" : "Load more"}
+          {displayedData.length > 12 ? "Load less" : "Load more"}
         </Button>
       ) : null}
     </>

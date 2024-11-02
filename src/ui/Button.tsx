@@ -31,6 +31,7 @@ const Button = styled.button<Buttons>`
     ButtonType === "btn2" &&
     css`
       background-color: var(--btn2-bg-color);
+      color: var(--btn2-font-color);
 
       &:hover {
         background-color: var(--btn2-bg-hover-color);

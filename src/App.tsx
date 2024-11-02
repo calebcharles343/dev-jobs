@@ -3,7 +3,7 @@ import { DarkModeProvider } from "./context/DarkModeContext";
 import AppLayout from "./ui/AppLayout";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
-import Details from "./pages/Details";
+import Detail from "./pages/Detail";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <Route element={<AppLayout />}>
             <Route path="/" element={<Navigate to="home" />} />
             <Route path="home" element={<Home />} />
-            <Route path="details" element={<Details />} />
+            <Route path="detail/:id" element={<Detail />} />
           </Route>
         </Routes>
       </BrowserRouter>

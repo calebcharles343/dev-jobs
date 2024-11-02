@@ -11,12 +11,13 @@ const GlobalStyles = createGlobalStyle`:root {
 
   --btn2-bg-color: rgba(89, 100, 224, 0.1); 
   --btn2-bg-hover-color: rgba(89, 100, 224, 0.35); 
-
+  --btn2-font-color: #5964e0;
+  
   --image-grayscale: 0;
   --image-opacity: 100%;
-
+  
   --job-bg-color: #ffffff;
-
+  
 }
 &.dark-mode{
   --body-bg:#B8B9BC;
@@ -24,9 +25,10 @@ const GlobalStyles = createGlobalStyle`:root {
   --bg-color-2:#19202d;
   
   --font-color: #ffffff;
-
+  
   --btn2-bg-color: rgba(255, 255, 255, 0.1);
   --btn2-bg-hover-color:  rgba(255, 255, 255, 0.35);
+  --btn2-font-color: #ffffff;
 
   --job-bg-color: #19202d;
 

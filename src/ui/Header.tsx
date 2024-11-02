@@ -3,6 +3,8 @@ import Heading from "./Heading";
 import ToggleSwitch from "./ToggleSwitch";
 import SeachBar from "./SeachBar";
 import headerBg from "../data/img/header-bg.png";
+import { useParams } from "react-router-dom";
+import DetailBar from "./DetailBar";
 
 const StyledHeader = styled.header`
   position: relative;
@@ -28,6 +30,7 @@ const Theme = styled.div`
 `;
 
 function Header() {
+  const { id } = useParams<{ id: string }>();
   return (
     <StyledHeader>
       <Heading as="h1">devjobs</Heading>
@@ -65,7 +68,7 @@ function Header() {
         </svg>
       </Theme>
 
-      <SeachBar />
+      {id ? <DetailBar /> : <SeachBar />}
     </StyledHeader>
   );
 }

@@ -14,7 +14,7 @@ const StyledJob = styled.div`
   height: 22.8rem;
   background-color: var(--job-bg-color);
   margin-top: 2.5rem;
-  padding: 0 3.2rem 3.2rem 3.2rem;
+  padding: 0.1rem 3.2rem 3.2rem 3.2rem;
 `;
 
 const Icon = styled.div<Icon>`
