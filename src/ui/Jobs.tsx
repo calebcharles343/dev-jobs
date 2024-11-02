@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import { useState } from "react";
 import { DataType } from "../Interfaces";
-import { useFormData } from "../context/FormDataContext";
+// import { useFormData } from "../context/FormDataContext";
 import styled from "styled-components";
 import Job from "./Job";
 import Button from "./Button";
@@ -19,10 +20,10 @@ const StyledJobs = styled.div`
 `;
 
 function Jobs() {
-  const [data, setData] = useState<DataType[]>([]);
+  // const [data, setData] = useState<DataType[]>([]);
   const [seeMore, setSeeMore] = useState<boolean>(false);
   // const { formData, updateField, handleSubmit } = useFormData();
-  const { formData } = useFormData();
+  // const { formData } = useFormData();
   /*
 useEffect(() => {
   fetch("/src/data/data.json")
