@@ -1,30 +1,45 @@
 import styled, { css } from "styled-components";
 
-const Heading = styled.h1`
-  ${(props) =>
-    props.as === "h1" &&
+interface HeadingProps {
+  headingType?: "h1" | "h2" | "h3" | "h4";
+  color?: string;
+}
+
+const Heading = styled.h1<HeadingProps>`
+  font-weight: 700;
+  ${({ color }) =>
+    color &&
+    css`
+      color: var(${color});
+    `};
+
+  ${({ headingType }) =>
+    headingType === "h1" &&
     css`
       font-size: 2.8rem;
       line-height: 3.4rem;
-    `}
-  ${(props) =>
-    props.as === "h2" &&
+    `};
+
+  ${({ headingType }) =>
+    headingType === "h2" &&
     css`
       font-size: 2.4rem;
       line-height: 2.9rem;
-    `}
-  ${(props) =>
-    props.as === "h3" &&
+    `};
+
+  ${({ headingType }) =>
+    headingType === "h3" &&
     css`
       font-size: 2rem;
       line-height: 2.4rem;
-    `}
-  ${(props) =>
-    props.as === "h4" &&
+    `};
+
+  ${({ headingType }) =>
+    headingType === "h4" &&
     css`
       font-size: 1.4rem;
       line-height: 1.8rem;
-    `} /* line-height:1.4; */
+    `};
 `;
 
 export default Heading;

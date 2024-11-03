@@ -8,6 +8,7 @@ const Button = styled.button<Buttons>`
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.984rem;

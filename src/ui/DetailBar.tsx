@@ -20,7 +20,7 @@ const CompanyBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  white-space: nowrap;s
+  white-space: nowrap;
   min-width: 14rem;
   height: 14rem;
   padding: 3rem;
