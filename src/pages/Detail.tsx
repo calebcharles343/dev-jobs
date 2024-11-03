@@ -6,7 +6,7 @@ import Heading from "../ui/Heading";
 
 const StyledDetail = styled.div`
   min-width: 73rem;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-2);
 
   padding: 1.8rem 4.8rem;
 `;
@@ -56,11 +56,66 @@ const DetailTextContainer = styled.div`
   line-height: 2.6rem;
   color: var(--dark-grey);
 
-  p {
-    margin-bottom: 4rem;
-  }
   h3 {
     margin-bottom: 4.8rem;
+  }
+`;
+
+const JobDescription = styled.div`
+  margin-bottom: 4rem;
+`;
+
+const JobRequirement = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 4rem;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    list-style: none; /* Removes default bullet points */
+  }
+
+  li {
+    display: flex;
+    /* align-items: center; */
+  }
+
+  li::before {
+    content: "•";
+    font-weight: 700;
+    margin-right: 1.5rem;
+  }
+`;
+
+const JobRole = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 4rem;
+
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+    counter-reset: list-counter;
+  }
+
+  li {
+    display: flex;
+    counter-increment: list-counter;
+  }
+
+  li::before {
+    content: counter(list-counter) ".";
+    font-weight: bold;
+    margin-right: 0.5rem;
+    min-width: 2rem;
   }
 `;
 
@@ -85,31 +140,37 @@ function Detail() {
         <Button ButtonType="btn1">Apply Now</Button>
       </DetailHeader>
       <DetailTextContainer>
-        <p>{job[0].description}</p>
+        <JobDescription>
+          <p>{job[0].description}</p>
+        </JobDescription>
 
-        <Heading headingType="h3" color="--font-color">
-          Requirement
-        </Heading>
+        <JobRequirement>
+          <Heading headingType="h3" color="--font-color">
+            Requirement
+          </Heading>
 
-        <p>{job[0].requirements.content}</p>
+          <p>{job[0].requirements.content}</p>
 
-        <ul>
-          {job[0].requirements.items.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
+          <ul>
+            {job[0].requirements.items.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </JobRequirement>
 
-        <Heading headingType="h3" color="--font-color">
-          What You Will Do
-        </Heading>
+        <JobRole>
+          <Heading headingType="h3" color="--font-color">
+            What You Will Do
+          </Heading>
 
-        <p>{job[0].role.content}</p>
+          <p>{job[0].role.content}</p>
 
-        <ol>
-          {job[0].requirements.items.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ol>
+          <ol>
+            {job[0].requirements.items.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ol>
+        </JobRole>
       </DetailTextContainer>
     </StyledDetail>
   );

@@ -45,7 +45,7 @@ const JobTextContainer = styled.div`
   color: white;
   font-weight: 400;
   font-size: 1.6rem;
-  gap: 1rem;
+  gap: 0.5rem;
 
   p {
     color: var(--dark-grey);

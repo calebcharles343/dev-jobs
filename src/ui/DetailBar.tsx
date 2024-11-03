@@ -13,7 +13,7 @@ const StyledDetailbar = styled.div`
   color: var(--font-color);
   min-width: 73rem;
   height: 14rem;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-2);
 `;
 
 const CompanyBox = styled.div`
