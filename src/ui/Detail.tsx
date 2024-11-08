@@ -8,9 +8,13 @@ const StyledDetail = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 73rem;
   margin-top: 12.8rem;
   margin-bottom: 5rem;
+
+  @media (max-width: 769px) {
+    width: 100vw;
+  }
 `;
 
 const DetailContainter = styled.div`
