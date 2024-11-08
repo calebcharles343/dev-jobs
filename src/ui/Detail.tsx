@@ -5,13 +5,19 @@ import Button from "../ui/Button";
 import Heading from "../ui/Heading";
 
 const StyledDetail = styled.div`
-  min-width: 73rem;
-  background-color: var(--bg-color-2);
-  padding: 1.8rem 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
   margin-bottom: 5rem;
+`;
+
+const DetailContainter = styled.div`
+  padding: 1.8rem 4.8rem;
+  background-color: var(--bg-color-2);
 
   @media (max-width: 769px) {
-    width: 100vw;
+    width: 68.9rem;
   }
 `;
 
@@ -19,8 +25,6 @@ const DetailHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 100%;
 `;
 
 const DetailTextHeader = styled.div`
@@ -29,6 +33,7 @@ const DetailTextHeader = styled.div`
   justify-content: center;
 
   width: 100%;
+
   min-height: 14.7rem;
   color: white;
   font-weight: 400;
@@ -55,7 +60,7 @@ const DetailTextHeader = styled.div`
 `;
 
 const DetailTextContainer = styled.div`
-  width: 63.9rem;
+  width: 100%;
   font-size: 1.6rem;
   line-height: 2.6rem;
   color: var(--dark-grey);
@@ -63,6 +68,10 @@ const DetailTextContainer = styled.div`
   h3 {
     margin-bottom: 4.8rem;
   }
+
+  /* @media (max-width: 769px) {
+    width: 68.9rem;
+  } */
 `;
 
 const JobDescription = styled.div`
@@ -137,7 +146,7 @@ const DetailfooterContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 73rem;
+  width: 73rem;
 
   div {
     display: flex;
@@ -150,6 +159,10 @@ const DetailfooterContainer = styled.div`
     font-size: 1.6rem;
     line-height: 1.984rem;
   }
+
+  @media (max-width: 769px) {
+    width: 68.9rem;
+  }
 `;
 
 function Detail() {
@@ -161,53 +174,55 @@ function Detail() {
   return (
     <>
       <StyledDetail>
-        <DetailHeader>
-          <DetailTextHeader>
-            <p>
-              {job[0].postedAt} . {job[0].contract}
-            </p>
+        <DetailContainter>
+          <DetailHeader>
+            <DetailTextHeader>
+              <p>
+                {job[0].postedAt} . {job[0].contract}
+              </p>
 
-            <Heading headingType="h1" color="--header-color">
-              {job[0].position}
-            </Heading>
+              <Heading headingType="h1" color="--header-color">
+                {job[0].position}
+              </Heading>
 
-            <span>{job[0].location}</span>
-          </DetailTextHeader>
-          <Button ButtonType="btn1">Apply Now</Button>
-        </DetailHeader>
-        <DetailTextContainer>
-          <JobDescription>
-            <p>{job[0].description}</p>
-          </JobDescription>
+              <span>{job[0].location}</span>
+            </DetailTextHeader>
+            <Button ButtonType="btn1">Apply Now</Button>
+          </DetailHeader>
+          <DetailTextContainer>
+            <JobDescription>
+              <p>{job[0].description}</p>
+            </JobDescription>
 
-          <JobRequirement>
-            <Heading headingType="h3" color="--header-color">
-              Requirement
-            </Heading>
+            <JobRequirement>
+              <Heading headingType="h3" color="--header-color">
+                Requirement
+              </Heading>
 
-            <p>{job[0].requirements.content}</p>
+              <p>{job[0].requirements.content}</p>
 
-            <ul>
-              {job[0].requirements.items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </JobRequirement>
+              <ul>
+                {job[0].requirements.items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </JobRequirement>
 
-          <JobRole>
-            <Heading headingType="h3" color="--header-color">
-              What You Will Do
-            </Heading>
+            <JobRole>
+              <Heading headingType="h3" color="--header-color">
+                What You Will Do
+              </Heading>
 
-            <p>{job[0].role.content}</p>
+              <p>{job[0].role.content}</p>
 
-            <ol>
-              {job[0].requirements.items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ol>
-          </JobRole>
-        </DetailTextContainer>
+              <ol>
+                {job[0].requirements.items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ol>
+            </JobRole>
+          </DetailTextContainer>
+        </DetailContainter>
       </StyledDetail>
 
       <Detailfooter>
