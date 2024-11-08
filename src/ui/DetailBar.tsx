@@ -11,7 +11,7 @@ const StyledDetailbar = styled.div`
   transform: translate(-50%, 70%);
   z-index: 9999;
   color: var(--font-color);
-  width: 73rem;
+  min-width: 73rem;
   height: 14rem;
   background-color: var(--bg-color-2);
 
@@ -25,7 +25,7 @@ const CompanyBox = styled.div`
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  min-width: 14rem;
+  /* min-width: 14rem; */
   height: 14rem;
   padding: 3rem;
   background-color: #e99210;
@@ -54,6 +54,7 @@ const CompanyText = styled.div`
     font-weight: 400;
     color: #6e8098;
   }
+  margin-right: 2rem;
 `;
 
 function DetailBar() {
