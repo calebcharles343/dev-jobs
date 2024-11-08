@@ -9,6 +9,11 @@ const Label = styled.label`
   /* height: 100%; */
   border: none;
   gap: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+    overflow: hidden;
+  }
 `;
 
 export default Label;

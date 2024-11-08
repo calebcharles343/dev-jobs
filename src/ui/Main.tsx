@@ -7,8 +7,12 @@ const StyledContainer = styled.main`
   align-items: center;
   width: 100%;
   min-width: 144rem;
-
   padding-bottom: 11.2rem;
+
+  @media (max-width: 769px) {
+    width: 100%;
+    min-width: 7.68rem;
+  }
 `;
 
 function Main({ children }: StyledContainerProps) {

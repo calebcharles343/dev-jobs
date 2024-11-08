@@ -7,15 +7,18 @@ import Heading from "../ui/Heading";
 const StyledDetail = styled.div`
   min-width: 73rem;
   background-color: var(--bg-color-2);
-
   padding: 1.8rem 4.8rem;
+  margin-bottom: 5rem;
+
+  @media (max-width: 769px) {
+    width: 100vw;
+  }
 `;
 
 const DetailHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid red; */
 
   width: 100%;
 `;
@@ -30,18 +33,19 @@ const DetailTextHeader = styled.div`
   color: white;
   font-weight: 400;
   font-size: 1.6rem;
-  gap: 1rem;
+  gap: 0.5rem;
 
   p {
     color: var(--dark-grey);
+    margin-bottom: -0.5rem;
   }
 
-  h4 {
+  /* h4 {
     font-size: 2.8rem;
     line-height: 3.473rem;
     font-weight: 700;
     color: var(--font-color);
-  }
+  } */
   span {
     font-size: 1.4rem;
     line-height: 1.736rem;
@@ -114,8 +118,37 @@ const JobRole = styled.div`
   li::before {
     content: counter(list-counter) ".";
     font-weight: bold;
+    color: var(--violet);
     margin-right: 0.5rem;
     min-width: 2rem;
+  }
+`;
+
+const Detailfooter = styled.footer`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 9.6rem;
+  background-color: var(--bg-color-2);
+`;
+
+const DetailfooterContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 73rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  p {
+    color: var(--dark-grey);
+    font-size: 1.6rem;
+    line-height: 1.984rem;
   }
 `;
 
@@ -126,53 +159,69 @@ function Detail() {
   console.log(job);
 
   return (
-    <StyledDetail>
-      <DetailHeader>
-        <DetailTextHeader>
-          <p>
-            {job[0].postedAt} . {job[0].contract}
-          </p>
+    <>
+      <StyledDetail>
+        <DetailHeader>
+          <DetailTextHeader>
+            <p>
+              {job[0].postedAt} . {job[0].contract}
+            </p>
 
-          <h4>{job[0].position}</h4>
+            <Heading headingType="h1" color="--header-color">
+              {job[0].position}
+            </Heading>
 
-          <span>{job[0].location}</span>
-        </DetailTextHeader>
-        <Button ButtonType="btn1">Apply Now</Button>
-      </DetailHeader>
-      <DetailTextContainer>
-        <JobDescription>
-          <p>{job[0].description}</p>
-        </JobDescription>
+            <span>{job[0].location}</span>
+          </DetailTextHeader>
+          <Button ButtonType="btn1">Apply Now</Button>
+        </DetailHeader>
+        <DetailTextContainer>
+          <JobDescription>
+            <p>{job[0].description}</p>
+          </JobDescription>
 
-        <JobRequirement>
-          <Heading headingType="h3" color="--font-color">
-            Requirement
-          </Heading>
+          <JobRequirement>
+            <Heading headingType="h3" color="--header-color">
+              Requirement
+            </Heading>
 
-          <p>{job[0].requirements.content}</p>
+            <p>{job[0].requirements.content}</p>
 
-          <ul>
-            {job[0].requirements.items.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </JobRequirement>
+            <ul>
+              {job[0].requirements.items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </JobRequirement>
 
-        <JobRole>
-          <Heading headingType="h3" color="--font-color">
-            What You Will Do
-          </Heading>
+          <JobRole>
+            <Heading headingType="h3" color="--header-color">
+              What You Will Do
+            </Heading>
 
-          <p>{job[0].role.content}</p>
+            <p>{job[0].role.content}</p>
 
-          <ol>
-            {job[0].requirements.items.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ol>
-        </JobRole>
-      </DetailTextContainer>
-    </StyledDetail>
+            <ol>
+              {job[0].requirements.items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ol>
+          </JobRole>
+        </DetailTextContainer>
+      </StyledDetail>
+
+      <Detailfooter>
+        <DetailfooterContainer>
+          <div>
+            <Heading headingType="h3" color="--header-color">
+              {job[0].position}
+            </Heading>
+            <p>So Digital inc</p>
+          </div>
+          <Button ButtonType="btn1">Apply Now</Button>
+        </DetailfooterContainer>
+      </Detailfooter>
+    </>
   );
 }
 

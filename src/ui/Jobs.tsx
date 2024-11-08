@@ -16,8 +16,15 @@ const StyledJobs = styled.ul`
     );
   width: 111rem;
   gap: 2.916666rem;
-  margin-bottom: 5.6rem;
+  margin-bottom: 3rem;
   justify-content: start;
+
+  @media (max-width: 769px) {
+    grid-template-columns: minmax(35rem, 31.53%) minmax(35rem, 31.53%);
+    max-width: 76.8rem;
+    gap: 1rem;
+    padding: 0 2rem;
+  }
 `;
 
 function Jobs() {

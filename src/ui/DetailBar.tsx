@@ -11,9 +11,13 @@ const StyledDetailbar = styled.div`
   transform: translate(-50%, 70%);
   z-index: 9999;
   color: var(--font-color);
-  min-width: 73rem;
+  width: 73rem;
   height: 14rem;
   background-color: var(--bg-color-2);
+
+  @media (max-width: 769px) {
+    width: 68.9rem;
+  }
 `;
 
 const CompanyBox = styled.div`
@@ -32,7 +36,7 @@ const Company = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 59rem;
+  width: 100%;
   padding: 4rem;
 `;
 

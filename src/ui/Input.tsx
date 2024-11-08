@@ -9,7 +9,7 @@ const Input = styled.input<Partial<InputT>>`
   background-color: inherit;
   height: 100%;
   border: none;
-  padding: 0 1rem;
+  width: 100%;
   box-shadow: var(--shadow-sm);
   ${({ width }) =>
     width === "medium" &&

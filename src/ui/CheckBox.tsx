@@ -11,8 +11,13 @@ interface CheckboxProps {
 const CheckboxContainer = styled.label`
   display: inline-flex;
   align-items: center;
+  font-weight: 700;
   cursor: pointer;
-  margin-right: 2rem;
+  gap: 0.5rem;
+
+  @media (max-width: 769px) {
+    gap: 1rem;
+  }
 `;
 
 const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
@@ -53,12 +58,20 @@ const CheckboxLabel = styled.span`
   font-size: 1.6rem;
 `;
 
+const LabelSpan = styled.span`
+  @media (max-width: 769px) {
+    display: none;
+  }
+`;
+
 function CheckBox({ checked, onChange, label }: CheckboxProps) {
   return (
     <CheckboxContainer>
       <HiddenCheckbox checked={checked} onChange={onChange} />
       <StyledCheckbox checked={checked} />
-      <CheckboxLabel>{label}</CheckboxLabel>
+      <CheckboxLabel>
+        {label} <LabelSpan>Only</LabelSpan>
+      </CheckboxLabel>
     </CheckboxContainer>
   );
 }

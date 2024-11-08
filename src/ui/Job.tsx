@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { DataType } from "../Interfaces";
+import Heading from "./Heading";
 
 interface Job {
   job: DataType;
@@ -15,6 +16,10 @@ const StyledJob = styled.div`
   background-color: var(--job-bg-color);
   margin-top: 2.5rem;
   padding: 0.1rem 3.2rem 3.2rem 3.2rem;
+
+  @media (max-width: 769px) {
+    width: 32.9rem;
+  }
 `;
 
 const Icon = styled.div<Icon>`
@@ -25,8 +30,8 @@ const Icon = styled.div<Icon>`
 
   width: 5rem;
   height: 5rem;
-  border-radius: 50px;
-  /* bottom: 0; */
+  border-radius: 15px;
+
   left: 16%;
   transform: translate(-50%, -50%);
   z-index: 999;
@@ -51,12 +56,12 @@ const JobTextContainer = styled.div`
     color: var(--dark-grey);
   }
 
-  h4 {
+  /* h4 {
     color: var(--font-color);
     font-weight: 700;
     font-size: 2rem;
     line-height: 2.48rem;
-  }
+  } */
 
   span {
     align-self: bottom;
@@ -84,7 +89,9 @@ function Job({ job }: Job) {
           {job.postedAt} . {job.contract}
         </p>
 
-        <h4>{job.position}</h4>
+        <Heading headingType="h3" color="--header-color">
+          {job.position}
+        </Heading>
 
         <p>{job.company}</p>
 

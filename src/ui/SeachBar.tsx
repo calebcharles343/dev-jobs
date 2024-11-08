@@ -6,21 +6,49 @@ import Button from "./Button";
 import { useFormData } from "../context/FormDataContext";
 const StyledSearchBar = styled.div`
   display: grid;
-  grid-template-columns: minmax(46.3rem, 42%) minmax(30.1rem, 27%) minmax(
-      34.69rem,
-      31%
-    );
+  grid-template-columns: 42% 27% 31%;
   align-items: center;
   background-color: var(--bg-color-2);
   width: 111rem;
   height: 8rem;
-  padding: 0 3.2rem;
+  padding: 0 1.6rem;
+
+  div:not(:last-of-type) {
+    border-right: 1px solid rgba(110, 128, 152, 0.2);
+    paddin-right: 1.6rem;
+  }
+
+  div:not(:first-of-type) {
+    padding-left: 2rem;
+  }
+
+  @media (max-width: 769px) {
+    grid-template-columns: 33% 33% 34%;
+    width: 68.9rem;
+    min-width: 7.68rem;
+    font-size: 1.6rem;
+    white-space: nowrap;
+    /* padding: 0 2rem; */
+  }
 `;
 
 const InputContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  height: 100%;
+  /* padding: 1.6rem; */
+  gap: 1.6rem;
+
+  @media (max-width: 769px) {
+    gap: 2rem;
+  }
+`;
+
+const SubmitContainer = styled.div`
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 1rem;/
 `;
 
 function SearchBar() {
@@ -85,18 +113,20 @@ function SearchBar() {
         </InputContainer>
 
         <InputContainer>
-          <CheckBox
-            name="fullTimeOnly"
-            checked={formData.fullTimeOnly}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              updateField("fullTimeOnly", e.target.checked)
-            }
-            label="Full Time Only"
-          />
+          <SubmitContainer>
+            <CheckBox
+              name="fullTimeOnly"
+              checked={formData.fullTimeOnly}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                updateField("fullTimeOnly", e.target.checked)
+              }
+              label="Full Time"
+            />
 
-          <Button ButtonType="btn1" type="submit">
-            Search
-          </Button>
+            <Button ButtonType="btn1" type="submit">
+              Search
+            </Button>
+          </SubmitContainer>
         </InputContainer>
       </StyledSearchBar>
     </Form>

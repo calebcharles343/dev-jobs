@@ -38,6 +38,12 @@ const Button = styled.button<Buttons>`
         background-color: var(--btn2-bg-hover-color);
       }
     `}
+
+  @media (max-width: 769px) {
+    font-size: 1.6rem;
+    padding: 1rem;
+    min-width: 8rem;
+  }
 `;
 
 export default Button;

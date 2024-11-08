@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`:root {
   --body-bg:#e7e8e9;
   --bg-color:#f4f6f8;
   --bg-color-2:#ffffff;
-  --font-color: #19202d;
+  --header-color: #19202d;
 
   --btn2-bg-color: rgba(89, 100, 224, 0.1); 
   --btn2-bg-hover-color: rgba(89, 100, 224, 0.35); 
@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle`:root {
   --bg-color: #181c28;
   --bg-color-2:#19202d;
   
-  --font-color: #ffffff;
+  --header-color: #ffffff;
   
   --btn2-bg-color: rgba(255, 255, 255, 0.1);
   --btn2-bg-hover-color:  rgba(255, 255, 255, 0.35);
@@ -37,6 +37,8 @@ const GlobalStyles = createGlobalStyle`:root {
 --image-opacity: 90%;
   }
 
+  --font-color: #6e8098;
+
 --violet: #5964e0;
 --light-violet: #939bf4;
 --very-dark-blue: #19202d;
@@ -45,10 +47,6 @@ const GlobalStyles = createGlobalStyle`:root {
 --light-grey: #f4f6f8;
 --grey: #9daec2;
 --dark-grey: #6e8098;
-
-
-
-
 
 
 }
@@ -77,6 +75,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   background-color: var(--body-bg);
+  color: var(--dark-grey)
   
   /* Only works if ther is nothing 
   absolutely positioned in relations to body  */
@@ -150,7 +149,7 @@ img {
   filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
 }
 input::placeholder {
-  letter-spacing: 0.4rem;
+  /* letter-spacing: 0.4rem; */
  
   opacity: 0.7;
 }

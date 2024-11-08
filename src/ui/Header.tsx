@@ -17,9 +17,12 @@ const StyledHeader = styled.header`
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 16.5rem 5.3rem 16.5rem;
-  color: #fff;
+  margin-bottom: 12.8rem;
 
-  margin-bottom: 11.8rem;
+  @media (max-width: 769px) {
+    padding: 0 3.5rem 5.3rem 3.5rem;
+    /* margin-bottom: 8.8rem; */
+  }
 `;
 
 const Theme = styled.div`
@@ -27,13 +30,19 @@ const Theme = styled.div`
   align-items: center;
   justify-content: center;
   gap: 3.6rem;
+
+  @media (max-width: 769px) {
+    gap: 2rem;
+  }
 `;
 
 function Header() {
   const { id } = useParams<{ id: string }>();
   return (
     <StyledHeader>
-      <Heading as="h1">devjobs</Heading>
+      <Heading headingType="h1" color="--white">
+        devjobs
+      </Heading>
       <Theme>
         <svg
           width="20"
