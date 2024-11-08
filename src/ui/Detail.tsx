@@ -9,6 +9,7 @@ const StyledDetail = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
+  margin-top: 12.8rem;
   margin-bottom: 5rem;
 `;
 

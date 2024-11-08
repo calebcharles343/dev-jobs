@@ -17,11 +17,9 @@ const StyledHeader = styled.header`
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 16.5rem 5.3rem 16.5rem;
-  margin-bottom: 12.8rem;
 
   @media (max-width: 769px) {
     padding: 0 3.5rem 5.3rem 3.5rem;
-    /* margin-bottom: 8.8rem; */
   }
 `;
 

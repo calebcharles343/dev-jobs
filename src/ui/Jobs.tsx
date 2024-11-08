@@ -17,6 +17,7 @@ const StyledJobs = styled.ul`
   width: 111rem;
   gap: 2.916666rem;
   margin-bottom: 3rem;
+  margin-top: 3.8rem;
   justify-content: start;
 
   @media (max-width: 769px) {
