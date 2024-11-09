@@ -2,12 +2,13 @@ import styled from "styled-components";
 import { useDarkMode } from "../context/DarkModeContext";
 
 interface CircleProps {
-  $isDarkMode: string;
+  $isDarkMode: boolean;
 }
 
 const StyledSVG = styled.svg`
   width: 4.8rem;
   height: 2.4rem;
+  overflow: visible; /* Ensure SVG visibility in Safari */
 `;
 
 const StyledRect = styled.rect`
@@ -20,11 +21,8 @@ const StyledRect = styled.rect`
 const StyledCircle = styled.circle<CircleProps>`
   fill: #5964e0;
   transition: cx 0.3s ease;
-  cx: ${(props) => (props.$isDarkMode === "true" ? 36 : 12)};
   cy: 12;
   r: 7;
-  fillrule: evenodd;
-  cliprule: evenodd;
 `;
 
 function ToggleSwitch() {
@@ -33,7 +31,8 @@ function ToggleSwitch() {
   return (
     <StyledSVG viewBox="0 0 48 24" onClick={toggleDarkMode}>
       <StyledRect />
-      <StyledCircle $isDarkMode={isDarkMode ? "true" : "false"} />
+      {/* Set cx directly in JSX */}
+      <StyledCircle cx={isDarkMode ? 36 : 12} $isDarkMode={isDarkMode} />
     </StyledSVG>
   );
 }
