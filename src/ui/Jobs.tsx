@@ -38,7 +38,7 @@ const StyledJobs = styled.ul`
     grid-template-columns: repeat(2, minmax(35rem, 1fr)); /* Tablet layout */
     max-width: 76.8rem;
     gap: 1rem;
-    padding: 0 2rem;
+    padding: 0 4rem;
   }
 
   ${media.mobile} {
