@@ -5,6 +5,7 @@ import Form from "./Form";
 import Button from "./Button";
 import { useFormData } from "../context/FormDataContext";
 import MobileSeachBar from "./MobileSeachbar";
+
 const StyledSearchBar = styled.div`
   display: grid;
   grid-template-columns: 42% 27% 31%;
