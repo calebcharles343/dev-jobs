@@ -64,6 +64,7 @@ const GlobalStyles = createGlobalStyle`:root {
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -81,9 +82,6 @@ body {
   absolutely positioned in relations to body  */
   overflow-x: hidden;
   overflow-y: scroll;
-  
-
-
 
 }
 
