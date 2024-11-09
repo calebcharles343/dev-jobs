@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import media from "../styles/MediaQuery";
 
 interface Buttons {
-  ButtonType: "btn1" | "btn2" | "mobile" | "mobile-2";
+  ButtonType: "btn1" | "btn2" | "mobile" | "mobile-2" | "long";
 }
 
 const Button = styled.button<Buttons>`
@@ -76,6 +76,18 @@ const Button = styled.button<Buttons>`
 
       &:hover {
         background-color: var(--light-violet);
+      }
+    `}
+  ${({ ButtonType }) =>
+    ButtonType === "long" &&
+    css`
+      background-color: var(--violet);
+      &:hover {
+        background-color: var(--light-violet);
+      }
+
+      ${media.mobile} {
+        width: 100%;
       }
     `}
 `;

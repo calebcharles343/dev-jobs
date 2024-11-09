@@ -25,12 +25,21 @@ const DetailContainter = styled.div`
   ${media.tablet} {
     width: 68.9rem;
   }
+
+  ${media.mobile} {
+    max-width: 100vw;
+  }
 `;
 
 const DetailHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ${media.mobile} {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
 `;
 
 const DetailTextHeader = styled.div`
@@ -169,6 +178,16 @@ const DetailfooterContainer = styled.div`
   ${media.tablet} {
     width: 68.9rem;
   }
+
+  ${media.mobile} {
+    width: 100%;
+    justify-content: center;
+    padding: 0 2rem;
+
+    div {
+      display: none;
+    }
+  }
 `;
 
 function Detail() {
@@ -193,7 +212,7 @@ function Detail() {
 
               <span>{job[0].location}</span>
             </DetailTextHeader>
-            <Button ButtonType="btn1">Apply Now</Button>
+            <Button ButtonType="long">Apply Now</Button>
           </DetailHeader>
           <DetailTextContainer>
             <JobDescription>
@@ -239,7 +258,7 @@ function Detail() {
             </Heading>
             <p>So Digital inc</p>
           </div>
-          <Button ButtonType="btn1">Apply Now</Button>
+          <Button ButtonType="long">Apply Now</Button>
         </DetailfooterContainer>
       </Detailfooter>
     </>
