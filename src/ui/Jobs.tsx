@@ -33,6 +33,9 @@ const StyledJobs = styled.ul`
     /* justify-content: center; */
     max-width: 100vw;
     padding: 0 1rem;
+
+    /* max-width: 50rem;
+    padding: 0 2rem; */
   }
 `;
 

@@ -12,6 +12,7 @@ const StyledContainer = styled.main`
   @media (max-width: 769px) {
     width: 100%;
     min-width: 7.68rem;
+    padding-x: 2rem;
   }
 `;
 
