@@ -76,7 +76,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   background-color: var(--body-bg);
-  color: var(--dark-grey)
+  color: var(--dark-grey);
   
   /* Only works if ther is nothing 
   absolutely positioned in relations to body  */
