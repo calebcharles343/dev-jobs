@@ -11,6 +11,7 @@ const Input = styled.input<Partial<InputT>>`
   border: none;
   width: 100%;
   box-shadow: var(--shadow-sm);
+  padding-left: 0.5rem;
   ${({ width }) =>
     width === "medium" &&
     css`
@@ -29,6 +30,15 @@ const Input = styled.input<Partial<InputT>>`
         color: #5964e0;
       }
     `}
+
+    &:-webkit-autofill {
+    /* -webkit-box-shadow: 0 0 0px 1000px white inset;  */
+    box-shadow: 0 0 0px 1000px var(--bg-color-2) inset; /* Fallback shadow for non-WebKit browsers */
+    -webkit-text-fill-color: var(
+      --header-color
+    ); /* Keeps the original font color */
+    background-color: transparent !important; /* Ensures no added background */
+  }
 `;
 
 export default Input;
