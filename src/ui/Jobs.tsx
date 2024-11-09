@@ -13,34 +13,45 @@ const media = {
   mobile: "@media (max-width: 560px)",
 };
 
+const JobContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the grid horizontally */
+  align-items: center; /* Aligns grid to the top */
+  min-height: 100vh;
+  padding-top: 2rem; /* Adjusts spacing at the top */
+
+  ${media.tablet} {
+    padding-top: 1.5rem;
+  }
+
+  ${media.mobile} {
+    padding-top: 1rem;
+  }
+`;
+
 const StyledJobs = styled.ul`
   display: grid;
-  grid-template-columns: minmax(35rem, 31.53%) minmax(35rem, 31.53%) minmax(
-      35rem,
-      31.53%
-    );
+  grid-template-columns: repeat(3, minmax(35rem, 1fr));
   width: 111rem;
   gap: 2.916666rem;
   margin-bottom: 3rem;
   margin-top: 3.8rem;
-  /* justify-content: start; */
 
   ${media.tablet} {
-    grid-template-columns: minmax(35rem, 31.53%) minmax(35rem, 31.53%);
+    grid-template-columns: repeat(2, minmax(35rem, 1fr)); /* Tablet layout */
     max-width: 76.8rem;
     gap: 1rem;
     padding: 0 2rem;
   }
 
   ${media.mobile} {
-    grid-template-columns: minmax(35rem, 31.53%);
-    /* align-items: center; */
-    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 100vw;
     padding: 0 1rem;
-
-    /* max-width: 50rem;
-    padding: 0 2rem; */
   }
 `;
 
@@ -95,22 +106,21 @@ useEffect(() => {
   };
 
   return (
-    <>
+    <JobContainer>
       <StyledJobs>
-        <StyledJobs>
-          {displayedData.map((job) => (
-            <li key={job.id} onClick={() => handleClick(job.id)}>
-              <Job job={job} />
-            </li>
-          ))}
-        </StyledJobs>
+        {displayedData.map((job) => (
+          <li key={job.id} onClick={() => handleClick(job.id)}>
+            <Job job={job} />
+          </li>
+        ))}
       </StyledJobs>
+
       {displayedData.length > 11 ? (
         <Button ButtonType="btn1" onClick={handleSeeMoreBtn}>
           {displayedData.length > 12 ? "Load less" : "Load more"}
         </Button>
       ) : null}
-    </>
+    </JobContainer>
   );
 }
 
