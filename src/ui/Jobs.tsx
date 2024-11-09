@@ -18,13 +18,21 @@ const StyledJobs = styled.ul`
   gap: 2.916666rem;
   margin-bottom: 3rem;
   margin-top: 3.8rem;
-  justify-content: start;
+  /* justify-content: start; */
 
   @media (max-width: 769px) {
     grid-template-columns: minmax(35rem, 31.53%) minmax(35rem, 31.53%);
     max-width: 76.8rem;
     gap: 1rem;
     padding: 0 2rem;
+  }
+
+  @media (max-width: 560px) {
+    grid-template-columns: minmax(35rem, 31.53%);
+    /* align-items: center; */
+    /* justify-content: center; */
+    max-width: 100vw;
+    padding: 0 1rem;
   }
 `;
 

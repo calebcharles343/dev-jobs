@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 interface Buttons {
-  ButtonType: "btn1" | "btn2";
+  ButtonType: "btn1" | "btn2" | "mobile" | "mobile-2";
 }
 
 const Button = styled.button<Buttons>`
@@ -12,7 +12,7 @@ const Button = styled.button<Buttons>`
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.984rem;
-  min-width: 14.1rem;
+  /* min-width: 14.1rem; */
   height: 4.8rem;
   border-radius: 5px;
   padding: 1.6rem 3.95rem;
@@ -27,7 +27,14 @@ const Button = styled.button<Buttons>`
       &:hover {
         background-color: var(--light-violet);
       }
+
+      @media (max-width: 769px) {
+        font-size: 1.6rem;
+        padding: 1rem 1.5rem;
+        min-width: 8rem;
+      }
     `};
+
   ${({ ButtonType }) =>
     ButtonType === "btn2" &&
     css`
@@ -37,13 +44,39 @@ const Button = styled.button<Buttons>`
       &:hover {
         background-color: var(--btn2-bg-hover-color);
       }
+
+      @media (max-width: 769px) {
+        font-size: 1.6rem;
+        padding: 1rem 1.5rem;
+        min-width: 8rem;
+      }
     `}
 
-  @media (max-width: 769px) {
-    font-size: 1.6rem;
-    padding: 1rem 1.5rem;
-    min-width: 8rem;
-  }
+  ${({ ButtonType }) =>
+    ButtonType === "mobile" &&
+    css`
+      background-color: var(--violet);
+
+      width: 4.8rem;
+      padding: 1rem;
+
+      &:hover {
+        background-color: var(--light-violet);
+      }
+    `}
+
+
+  ${({ ButtonType }) =>
+    ButtonType === "mobile-2" &&
+    css`
+      background-color: var(--violet);
+
+      width: 100%;
+
+      &:hover {
+        background-color: var(--light-violet);
+      }
+    `}
 `;
 
 export default Button;

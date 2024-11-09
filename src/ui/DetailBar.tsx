@@ -17,6 +17,7 @@ const StyledDetailbar = styled.div`
 
   @media (max-width: 769px) {
     width: 68.9rem;
+    transform: translate(-50%, 65%);
   }
 `;
 
