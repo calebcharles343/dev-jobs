@@ -8,6 +8,11 @@ import Button from "./Button";
 import { dataJS } from "../data/dataJS";
 import { useNavigate } from "react-router-dom";
 
+const media = {
+  tablet: "@media (max-width: 769px)",
+  mobile: "@media (max-width: 560px)",
+};
+
 const StyledJobs = styled.ul`
   display: grid;
   grid-template-columns: minmax(35rem, 31.53%) minmax(35rem, 31.53%) minmax(
@@ -20,14 +25,14 @@ const StyledJobs = styled.ul`
   margin-top: 3.8rem;
   /* justify-content: start; */
 
-  @media (max-width: 769px) {
+  ${media.tablet} {
     grid-template-columns: minmax(35rem, 31.53%) minmax(35rem, 31.53%);
     max-width: 76.8rem;
     gap: 1rem;
     padding: 0 2rem;
   }
 
-  @media (max-width: 560px) {
+  ${media.mobile} {
     grid-template-columns: minmax(35rem, 31.53%);
     /* align-items: center; */
     /* justify-content: center; */
