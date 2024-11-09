@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import media from "../styles/MediaQuery";
 
 interface Buttons {
   ButtonType: "btn1" | "btn2" | "mobile" | "mobile-2";
@@ -28,7 +29,7 @@ const Button = styled.button<Buttons>`
         background-color: var(--light-violet);
       }
 
-      @media (max-width: 769px) {
+      ${media.tablet} {
         font-size: 1.6rem;
         padding: 1rem 1.5rem;
         min-width: 8rem;
@@ -45,7 +46,7 @@ const Button = styled.button<Buttons>`
         background-color: var(--btn2-bg-hover-color);
       }
 
-      @media (max-width: 769px) {
+      ${media.tablet} {
         font-size: 1.6rem;
         padding: 1rem 1.5rem;
         min-width: 8rem;

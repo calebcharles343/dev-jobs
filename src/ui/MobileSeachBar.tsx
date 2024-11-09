@@ -5,6 +5,7 @@ import Input from "./Input";
 import { useFormData } from "../context/FormDataContext";
 import Button from "./Button";
 import CheckBox from "./CheckBox";
+import media from "../styles/MediaQuery";
 
 const StyledMobileSeachBar = styled.div`
   display: none;
@@ -12,7 +13,7 @@ const StyledMobileSeachBar = styled.div`
   width: 32.7rem;
   height: 8rem;
   border-radius: 5px;
-  @media (max-width: 560px) {
+  ${media.mobile} {
     display: block;
   }
 `;

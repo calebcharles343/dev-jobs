@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../styles/MediaQuery";
 
 // Define prop types for Checkbox
 interface CheckboxProps {
@@ -15,7 +16,7 @@ const CheckboxContainer = styled.label`
   cursor: pointer;
   gap: 0.5rem;
 
-  @media (max-width: 769px) {
+  ${media.tablet} {
     gap: 1rem;
   }
 `;
@@ -59,7 +60,7 @@ const CheckboxLabel = styled.span`
 `;
 
 const LabelSpan = styled.span`
-  @media (max-width: 769px) {
+  ${media.tablet} {
     display: none;
   }
 `;

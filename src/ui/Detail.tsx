@@ -3,6 +3,7 @@ import { dataJS } from "../data/dataJS";
 import styled from "styled-components";
 import Button from "../ui/Button";
 import Heading from "../ui/Heading";
+import media from "../styles/MediaQuery";
 
 const StyledDetail = styled.div`
   display: flex;
@@ -12,7 +13,7 @@ const StyledDetail = styled.div`
   margin-top: 12.8rem;
   margin-bottom: 5rem;
 
-  @media (max-width: 769px) {
+  ${media.tablet} {
     width: 100vw;
   }
 `;
@@ -21,7 +22,7 @@ const DetailContainter = styled.div`
   padding: 1.8rem 4.8rem;
   background-color: var(--bg-color-2);
 
-  @media (max-width: 769px) {
+  ${media.tablet} {
     width: 68.9rem;
   }
 `;
@@ -165,7 +166,7 @@ const DetailfooterContainer = styled.div`
     line-height: 1.984rem;
   }
 
-  @media (max-width: 769px) {
+  ${media.tablet} {
     width: 68.9rem;
   }
 `;

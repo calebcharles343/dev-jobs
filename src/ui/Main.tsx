@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { StyledContainerProps } from "../Interfaces";
+import media from "../styles/MediaQuery";
 
 const StyledContainer = styled.main`
   display: flex;
@@ -9,7 +10,7 @@ const StyledContainer = styled.main`
   min-width: 144rem;
   padding-bottom: 11.2rem;
 
-  @media (max-width: 769px) {
+  ${media.tablet} {
     width: 100%;
     min-width: 7.68rem;
     padding-x: 2rem;

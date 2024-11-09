@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../styles/MediaQuery";
 
 const Label = styled.label`
   display: flex;
@@ -10,7 +11,7 @@ const Label = styled.label`
   border: none;
   gap: 1rem;
 
-  @media (max-width: 768px) {
+  ${media.tablet} {
     font-size: 1.6rem;
     overflow: hidden;
   }

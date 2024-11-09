@@ -7,11 +7,7 @@ import Job from "./Job";
 import Button from "./Button";
 import { dataJS } from "../data/dataJS";
 import { useNavigate } from "react-router-dom";
-
-const media = {
-  tablet: "@media (max-width: 769px)",
-  mobile: "@media (max-width: 560px)",
-};
+import media from "../styles/MediaQuery";
 
 const JobContainer = styled.div`
   display: flex;

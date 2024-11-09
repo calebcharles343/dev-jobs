@@ -5,6 +5,7 @@ import SeachBar from "./SeachBar";
 import headerBg from "../data/img/header-bg.png";
 import { useParams } from "react-router-dom";
 import DetailBar from "./DetailBar";
+import media from "../styles/MediaQuery";
 
 const StyledHeader = styled.header`
   position: relative;
@@ -18,7 +19,7 @@ const StyledHeader = styled.header`
   background-size: cover;
   padding: 0 16.5rem 5.3rem 16.5rem;
 
-  @media (max-width: 769px) {
+  ${media.tablet} {
     padding: 0 3.5rem 5.3rem 3.5rem;
   }
 `;
@@ -29,7 +30,7 @@ const Theme = styled.div`
   justify-content: center;
   gap: 3.6rem;
 
-  @media (max-width: 769px) {
+  ${media.tablet} {
     gap: 2rem;
   }
 `;

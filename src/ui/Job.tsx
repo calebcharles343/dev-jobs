@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { DataType } from "../Interfaces";
 import Heading from "./Heading";
+import media from "../styles/MediaQuery";
 
 interface Job {
   job: DataType;
@@ -17,7 +18,7 @@ const StyledJob = styled.div`
   margin-top: 2.5rem;
   padding: 0.1rem 3.2rem 3.2rem 3.2rem;
 
-  @media (max-width: 769px) {
+  ${media.tablet} {
     width: 32.9rem;
   }
 `;

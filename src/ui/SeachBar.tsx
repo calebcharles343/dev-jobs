@@ -5,6 +5,7 @@ import Form from "./Form";
 import Button from "./Button";
 import { useFormData } from "../context/FormDataContext";
 import MobileSeachBar from "./MobileSeachbar";
+import media from "../styles/MediaQuery";
 
 const StyledSearchBar = styled.div`
   display: grid;
@@ -24,7 +25,7 @@ const StyledSearchBar = styled.div`
     padding-left: 2rem;
   }
 
-  @media (max-width: 769px) {
+  ${media.tablet} {
     grid-template-columns: 33% 33% 34%;
     width: 68.9rem;
     min-width: 7.68rem;
@@ -33,7 +34,7 @@ const StyledSearchBar = styled.div`
     /* padding: 0 2rem; */
   }
 
-  @media (max-width: 560px) {
+  ${media.mobile} {
     display: none;
   }
 `;

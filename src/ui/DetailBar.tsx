@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { dataJS } from "../data/dataJS";
 import Button from "./Button";
+import media from "../styles/MediaQuery";
 
 const StyledDetailbar = styled.div`
   position: absolute;
@@ -15,7 +16,7 @@ const StyledDetailbar = styled.div`
   height: 14rem;
   background-color: var(--bg-color-2);
 
-  @media (max-width: 769px) {
+  ${media.tablet} {
     width: 68.9rem;
     transform: translate(-50%, 65%);
   }
