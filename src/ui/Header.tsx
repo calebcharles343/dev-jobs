@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Heading from "./Heading";
 import ToggleSwitch from "./ToggleSwitch";
-import SeachBar from "./SeachBar";
+import SearchBar from "./SearchBar";
 import headerBg from "../data/img/header-bg.png";
 import { useParams } from "react-router-dom";
 import DetailBar from "./DetailBar";
@@ -76,7 +76,7 @@ function Header() {
         </svg>
       </Theme>
 
-      {id ? <DetailBar /> : <SeachBar />}
+      {id ? <DetailBar /> : <SearchBar />}
     </StyledHeader>
   );
 }

@@ -4,7 +4,7 @@ import CheckBox from "./CheckBox";
 import Form from "./Form";
 import Button from "./Button";
 import { useFormData } from "../context/FormDataContext";
-import MobileSeachBar from "./MobileSearchBar";
+import MobileSearchBar from "./MobileSearchBar";
 import media from "../styles/MediaQuery";
 
 const StyledSearchBar = styled.div`
@@ -136,7 +136,7 @@ function SearchBar() {
         </InputContainer>
       </StyledSearchBar>
 
-      <MobileSeachBar />
+      <MobileSearchBar />
     </Form>
   );
 }
