@@ -112,7 +112,7 @@ function MobileSeachBar() {
                   </svg>
                   <Input
                     name="country"
-                    placeholder="Flter by location"
+                    placeholder="Filter by location"
                     type="text"
                     value={formData.country}
                     onChange={(e) => updateField("country", e.target.value)}
