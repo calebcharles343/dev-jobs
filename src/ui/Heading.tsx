@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
+import media from "../styles/MediaQuery";
 
 interface HeadingProps {
-  headingType?: "h1" | "h2" | "h3" | "h4";
+  headingType?: "h1" | "h2" | "h3" | "h4" | "h1-mobile";
   color?: string;
 }
 
@@ -39,6 +40,16 @@ const Heading = styled.h1<HeadingProps>`
     css`
       font-size: 1.4rem;
       line-height: 1.8rem;
+    `};
+  ${({ headingType }) =>
+    headingType === "h1-mobile" &&
+    css`
+      font-size: 2.8rem;
+      line-height: 3.4rem;
+
+      ${media.mobile} {
+        font-size: 2rem;
+      }
     `};
 `;
 

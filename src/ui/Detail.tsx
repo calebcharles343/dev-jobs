@@ -209,7 +209,7 @@ function Detail() {
                 {job[0].postedAt} . {job[0].contract}
               </p>
 
-              <Heading headingType="h1" color="--header-color">
+              <Heading headingType="h1-mobile" color="--header-color">
                 {job[0].position}
               </Heading>
 
