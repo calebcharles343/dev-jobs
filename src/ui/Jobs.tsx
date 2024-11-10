@@ -10,22 +10,16 @@ import { useNavigate } from "react-router-dom";
 import media from "../styles/MediaQuery";
 
 const JobsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
   padding-top: 4rem;
-  ${media.tablet} {
-    padding-top: 1.5rem;
-  }
-
-  ${media.mobile} {
-    padding-top: 4rem;
-  }
 `;
 
 const StyledJobs = styled.ul`
   display: grid;
-  justify-content: start;
-  align-items: start;
-
   grid-template-columns: repeat(3, minmax(35rem, 1fr));
   width: 111rem;
   gap: 2.916666rem;
