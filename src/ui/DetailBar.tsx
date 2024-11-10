@@ -24,7 +24,6 @@ const StyledDetailbar = styled.div`
   width: 73rem;
   height: 14rem;
   background-color: var(--bg-color-2);
-  border: 1px solid red;
 
   ${media.tablet} {
     width: 68.9rem;
@@ -33,7 +32,6 @@ const StyledDetailbar = styled.div`
 
   ${media.mobile} {
     flex-direction: column;
-
     width: 32.7rem;
     height: auto;
     transform: translate(-50%, 90%);
@@ -48,7 +46,6 @@ const CompanyBox = styled.div<CompanyBox>`
   width: 14rem;
   height: 14rem;
   padding: 3rem;
-  border: 1px solid red;
 
   color: var(--white);
 
@@ -79,8 +76,6 @@ const Company = styled.div`
   justify-content: space-between;
   width: 100%;
   padding: 4rem;
-  border: 1px solid red;
-  background-color: yellow;
 
   ${media.mobile} {
     flex-direction: column;
@@ -91,8 +86,6 @@ const Company = styled.div`
 `;
 
 const CompanyText = styled.div`
-  border: 1px solid red;
-
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -109,9 +102,9 @@ const CompanyText = styled.div`
   margin-right: 2rem;
 
   ${media.mobile} {
-    /* flex-direction: row; */
     align-items: center;
     justify-content: center;
+    margin-right: 0;
   }
 `;
 

@@ -16,6 +16,9 @@ const StyledDetail = styled.div`
   ${media.tablet} {
     width: 100vw;
   }
+  ${media.mobile} {
+    margin-top: 22.8rem;
+  }
 `;
 
 const DetailContainter = styled.div`
