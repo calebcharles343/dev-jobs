@@ -3,6 +3,7 @@ import Heading from "./Heading";
 import ToggleSwitch from "./ToggleSwitch";
 import SearchBar from "./SearchBar";
 import headerBg from "../data/img/header-bg.png";
+import headerBgMobile from "../data/img/Triangle.png";
 import { useParams } from "react-router-dom";
 import DetailBar from "./DetailBar";
 import media from "../styles/MediaQuery";
@@ -21,6 +22,9 @@ const StyledHeader = styled.header`
 
   ${media.tablet} {
     padding: 0 3.5rem 5.3rem 3.5rem;
+  }
+  ${media.mobile} {
+    background-image: url(${headerBgMobile});
   }
 `;
 
