@@ -10,7 +10,6 @@ const Input = styled.input<Partial<InputT>>`
   height: 100%;
   border: none;
   width: 100%;
-  box-shadow: var(--shadow-sm);
   padding-left: 0.5rem;
   ${({ width }) =>
     width === "medium" &&
