@@ -11,6 +11,12 @@ const GlobalStyles = createGlobalStyle`:root {
     --btn2-bg-hover-color: rgba(89, 100, 224, 0.35);
     --btn2-font-color: #5964e0;
     --job-bg-color: #ffffff;
+
+    --backdrop-color: rgba(255, 255, 255, 0.1);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0px 0.6rem 2.4rem rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 2.4rem 3.2rem rgba(0, 0, 0, 0.12);
+
     --image-grayscale: 0;
     --image-opacity: 100%;
   }
@@ -25,6 +31,12 @@ const GlobalStyles = createGlobalStyle`:root {
     --btn2-bg-hover-color: rgba(255, 255, 255, 0.35);
     --btn2-font-color: #ffffff;
     --job-bg-color: #19202d;
+
+    --backdrop-color: rgba(0, 0, 0, 0.3);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0px 0.6rem 2.4rem rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 2.4rem 3.2rem rgba(0, 0, 0, 0.4);
+
     --image-grayscale: 10%;
     --image-opacity: 90%;
   }
@@ -39,6 +51,8 @@ const GlobalStyles = createGlobalStyle`:root {
   --light-grey: #f4f6f8;
   --grey: #9daec2;
   --dark-grey: #6e8098;
+
+  --backdrop-color:
 }
 
 /* Global Reset and Transitions */
