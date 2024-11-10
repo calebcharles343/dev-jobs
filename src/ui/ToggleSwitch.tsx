@@ -23,6 +23,7 @@ const StyledCircle = styled.circle<CircleProps>`
   transition: cx 0.3s ease;
   cy: 12;
   r: 7;
+  cx: ${(props) => (props.$isDarkMode ? "36" : "12")};
 `;
 
 function ToggleSwitch() {
@@ -31,8 +32,7 @@ function ToggleSwitch() {
   return (
     <StyledSVG viewBox="0 0 48 24" onClick={toggleDarkMode}>
       <StyledRect />
-      {/* Set cx directly in JSX */}
-      <StyledCircle cx={isDarkMode ? 36 : 12} $isDarkMode={isDarkMode} />
+      <StyledCircle $isDarkMode={isDarkMode} />
     </StyledSVG>
   );
 }
