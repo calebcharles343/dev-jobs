@@ -9,25 +9,23 @@ import { dataJS } from "../data/dataJS";
 import { useNavigate } from "react-router-dom";
 import media from "../styles/MediaQuery";
 
-const JobContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centers the grid horizontally */
-  align-items: center; /* Aligns grid to the top */
+const JobsContainer = styled.div`
   min-height: 100vh;
-  padding-top: 2rem; /* Adjusts spacing at the top */
-
+  padding-top: 4rem;
   ${media.tablet} {
     padding-top: 1.5rem;
   }
 
   ${media.mobile} {
-    padding-top: 1rem;
+    padding-top: 4rem;
   }
 `;
 
 const StyledJobs = styled.ul`
   display: grid;
+  justify-content: start;
+  align-items: start;
+
   grid-template-columns: repeat(3, minmax(35rem, 1fr));
   width: 111rem;
   gap: 2.916666rem;
@@ -102,7 +100,7 @@ useEffect(() => {
   };
 
   return (
-    <JobContainer>
+    <JobsContainer>
       <StyledJobs>
         {displayedData.map((job) => (
           <li key={job.id} onClick={() => handleClick(job.id)}>
@@ -116,7 +114,7 @@ useEffect(() => {
           {displayedData.length > 12 ? "Load less" : "Load more"}
         </Button>
       ) : null}
-    </JobContainer>
+    </JobsContainer>
   );
 }
 
