@@ -1,19 +1,13 @@
-import { ChangeEvent } from "react";
 import styled from "styled-components";
-import { SelectT } from "../Interfaces";
+import { SelectProps, StyledSelectProps } from "../Interfaces";
 
-interface StyledSelectT {
-  type: string;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-}
-
-const StyledSelect = styled.select<StyledSelectT>`
+const StyledSelect = styled.select<StyledSelectProps>`
   font-size: 1.4rem;
   padding: 0.8rem 1.2rem;
   background-color: inherit;
 `;
 
-function Select({ options, value, onChange, type }: SelectT) {
+function Select({ options, value, onChange, type }: SelectProps) {
   return (
     <StyledSelect value={value} onChange={onChange} type={type}>
       {options?.map((option) => (

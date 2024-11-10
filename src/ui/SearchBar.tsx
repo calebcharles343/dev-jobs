@@ -31,7 +31,6 @@ const StyledSearchBar = styled.div`
     min-width: 7.68rem;
     font-size: 1.6rem;
     white-space: nowrap;
-    /* padding: 0 2rem; */
   }
 
   ${media.mobile} {
@@ -43,7 +42,6 @@ const InputContainer = styled.div`
   display: flex;
   align-items: center;
   height: 100%;
-  /* padding: 1.6rem; */
   gap: 1.6rem;
 
   @media (max-width: 769px) {
@@ -62,7 +60,7 @@ function SearchBar() {
 
   const onFormSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    handleSubmit(); // Log form data on submit
+    handleSubmit();
   };
 
   return (

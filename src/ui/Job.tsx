@@ -1,14 +1,7 @@
 import styled, { css } from "styled-components";
-import { DataType } from "../Interfaces";
+import { IconProps, JobProps } from "../Interfaces";
 import Heading from "./Heading";
 import media from "../styles/MediaQuery";
-
-interface Job {
-  job: DataType;
-}
-interface Icon {
-  logoBg: string;
-}
 
 const StyledJob = styled.div`
   position: relative;
@@ -23,7 +16,7 @@ const StyledJob = styled.div`
   }
 `;
 
-const Icon = styled.div<Icon>`
+const Icon = styled.div<IconProps>`
   position: absolute;
   display: flex;
   align-items: center;
@@ -57,13 +50,6 @@ const JobTextContainer = styled.div`
     color: var(--dark-grey);
   }
 
-  /* h4 {
-    color: var(--font-color);
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 2.48rem;
-  } */
-
   span {
     align-self: bottom;
     font-size: 1.4rem;
@@ -77,9 +63,7 @@ const JobTextContainer = styled.div`
   }
 `;
 
-function Job({ job }: Job) {
-  // console.log(job);
-
+function Job({ job }: JobProps) {
   return (
     <StyledJob>
       <Icon logoBg={job.logoBackground}>

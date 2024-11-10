@@ -1,14 +1,11 @@
 import styled from "styled-components";
 import { useDarkMode } from "../context/DarkModeContext";
-
-interface CircleProps {
-  $isDarkMode: boolean;
-}
+import { CircleProps } from "../Interfaces";
 
 const StyledSVG = styled.svg`
   width: 4.8rem;
   height: 2.4rem;
-  overflow: visible; /* Ensure SVG visibility in Safari */
+  overflow: visible;
 `;
 
 const StyledRect = styled.rect`

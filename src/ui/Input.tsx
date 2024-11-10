@@ -1,9 +1,7 @@
 import styled, { css } from "styled-components";
-interface InputT {
-  width?: string;
-  height?: string;
-}
-const Input = styled.input<Partial<InputT>>`
+import { InputProps } from "../Interfaces";
+
+const Input = styled.input<Partial<InputProps>>`
   font-size: 1.8rem;
   font-weight: 600;
   background-color: inherit;
@@ -31,12 +29,9 @@ const Input = styled.input<Partial<InputT>>`
     `}
 
     &:-webkit-autofill {
-    /* -webkit-box-shadow: 0 0 0px 1000px white inset;  */
-    box-shadow: 0 0 0px 1000px var(--bg-color-2) inset; /* Fallback shadow for non-WebKit browsers */
-    -webkit-text-fill-color: var(
-      --header-color
-    ); /* Keeps the original font color */
-    background-color: transparent !important; /* Ensures no added background */
+    box-shadow: 0 0 0px 1000px var(--bg-color-2) inset;
+    -webkit-text-fill-color: var(--header-color);
+    background-color: transparent !important;
   }
 `;
 

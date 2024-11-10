@@ -27,7 +27,7 @@ const StyledJobs = styled.ul`
   margin-top: 3.8rem;
 
   ${media.tablet} {
-    grid-template-columns: repeat(2, minmax(35rem, 1fr)); /* Tablet layout */
+    grid-template-columns: repeat(2, minmax(35rem, 1fr));
     max-width: 76.8rem;
     gap: 1rem;
     padding: 0 4rem;

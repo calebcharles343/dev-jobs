@@ -9,27 +9,7 @@ import {
 import Home from "./pages/Home";
 import Detail from "./pages/DetailPage";
 import PageNotFound from "./ui/PageNotFound";
-/*
-function App() {
-  return (
-    <DarkModeProvider>
-      <GlobalStyles />
-      <BrowserRouter>
-        <Routes>
-          <Route element={<AppLayout />}>
-            <Route path="/" element={<Navigate to="home" />} />
-            <Route path="home" element={<Home />} />
-            <Route path="detail/:id" element={<Detail />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </DarkModeProvider>
-  );
-}
-*/
 
-// Define routes using createBrowserRouter
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -46,7 +26,6 @@ function App() {
   return (
     <DarkModeProvider>
       <GlobalStyles />
-      {/* Use RouterProvider instead of BrowserRouter */}
       <RouterProvider router={router} />
     </DarkModeProvider>
   );

@@ -4,9 +4,9 @@ import { cloneElement } from "react";
 
 import { createContext } from "react";
 import { createPortal } from "react-dom";
-// import { HiXMark } from "react-icons/hi2";
 import styled from "styled-components";
 import { useOutsideClick } from "../hooks/useOutsideClick";
+import { ModalContextProps } from "../Interfaces";
 
 const StyledModal = styled.div`
   position: fixed;
@@ -31,36 +31,6 @@ const Overlay = styled.div`
   z-index: 99999;
   transition: all 0.5s;
 `;
-/*
-const Button = styled.button`
-background: none;
-border: none;
-padding: 0.4rem;
-border-radius: var(--border-radius-sm);
-  transform: translateX(0.8rem);
-  transition: all 0.2s;
-  position: absolute;
-  top: 1.2rem;
-  right: 1.9rem;
-  
-  &:hover {
-    background-color: var(--color-grey-100);
-  }
-  
-  & svg {
-    width: 2.4rem;
-    height: 2.4rem;
-    
-    //color: var(--color-grey-500);
-  }
-  `;
-  */
-
-interface ModalContextProps {
-  open: (name: string) => void;
-  close: () => void;
-  openName: string;
-}
 
 // Context for managing modal state
 const ModalContext = createContext<ModalContextProps | undefined>(undefined);

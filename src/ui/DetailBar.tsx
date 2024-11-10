@@ -2,15 +2,8 @@ import { useParams } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { dataJS } from "../data/dataJS";
 import Button from "./Button";
-// import media from "../styles/MediaQuery";
-interface CompanyBox {
-  logoBg: string;
-}
-
-const media = {
-  tablet: "@media (max-width: 769px)",
-  mobile: "@media (max-width: 560px)",
-};
+import { CompanyBoxProps } from "../Interfaces";
+import media from "../styles/MediaQuery";
 
 const StyledDetailbar = styled.div`
   position: absolute;
@@ -38,7 +31,7 @@ const StyledDetailbar = styled.div`
   }
 `;
 
-const CompanyBox = styled.div<CompanyBox>`
+const CompanyBox = styled.div<CompanyBoxProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,7 +110,6 @@ function DetailBar() {
   return (
     <StyledDetailbar>
       <CompanyBox logoBg={job[0].logoBackground}>
-        {/* <h1>{job[0].company.toLocaleLowerCase()}</h1> */}
         <img src={`.${job[0].logo}`} alt={`logo of ${job[0].company}`} />
       </CompanyBox>
       <Company>

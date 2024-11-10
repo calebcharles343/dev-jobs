@@ -7,7 +7,6 @@ const Label = styled.label`
   font-size: 1.8rem;
   font-weight: 600;
   background-color: inherit;
-  /* height: 100%; */
   border: none;
   gap: 1rem;
 

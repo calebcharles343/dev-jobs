@@ -31,7 +31,6 @@ const FilterContainer = styled.div`
   color: var(--header-color);
   width: 32.7rem;
   height: 21.7rem;
-  /* padding: 2.4rem; */
 `;
 
 const MobileInputContainer = styled.div`
@@ -61,7 +60,7 @@ function MobileSeachBar() {
 
   const onFormSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    handleSubmit(); // Log form data on submit
+    handleSubmit();
   };
   return (
     <Form onSubmit={onFormSubmit}>

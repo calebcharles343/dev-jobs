@@ -1,9 +1,6 @@
 import styled, { css } from "styled-components";
 import media from "../styles/MediaQuery";
-
-interface Buttons {
-  ButtonType: "btn1" | "btn2" | "mobile" | "mobile-2" | "long";
-}
+import { Buttons } from "../Interfaces";
 
 const Button = styled.button<Buttons>`
   display: flex;

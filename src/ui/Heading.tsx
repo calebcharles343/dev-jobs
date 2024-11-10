@@ -1,10 +1,6 @@
 import styled, { css } from "styled-components";
 import media from "../styles/MediaQuery";
-
-interface HeadingProps {
-  headingType?: "h1" | "h2" | "h3" | "h4" | "h1-mobile";
-  color?: string;
-}
+import { HeadingProps } from "../Interfaces";
 
 const Heading = styled.h1<HeadingProps>`
   font-weight: 700;

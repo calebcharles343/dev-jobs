@@ -63,12 +63,6 @@ const DetailTextHeader = styled.div`
     margin-bottom: -0.5rem;
   }
 
-  /* h4 {
-    font-size: 2.8rem;
-    line-height: 3.473rem;
-    font-weight: 700;
-    color: var(--font-color);
-  } */
   span {
     font-size: 1.4rem;
     line-height: 1.736rem;
@@ -86,10 +80,6 @@ const DetailTextContainer = styled.div`
   h3 {
     margin-bottom: 4.8rem;
   }
-
-  /* @media (max-width: 769px) {
-    width: 68.9rem;
-  } */
 `;
 
 const JobDescription = styled.div`
@@ -107,12 +97,11 @@ const JobRequirement = styled.div`
     flex-direction: column;
     gap: 1rem;
     padding: 0;
-    list-style: none; /* Removes default bullet points */
+    list-style: none;
   }
 
   li {
     display: flex;
-    /* align-items: center; */
   }
 
   li::before {

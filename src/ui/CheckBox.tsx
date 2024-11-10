@@ -1,13 +1,6 @@
 import styled from "styled-components";
 import media from "../styles/MediaQuery";
-
-// Define prop types for Checkbox
-interface CheckboxProps {
-  name: string; // Add `name` to the props
-  checked: boolean;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  label: string;
-}
+import { CheckboxProps } from "../Interfaces";
 
 const CheckboxContainer = styled.label`
   display: inline-flex;
