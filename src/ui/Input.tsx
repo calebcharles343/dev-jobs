@@ -32,6 +32,10 @@ const Input = styled.input<Partial<InputProps>>`
     box-shadow: 0 0 0px 1000px var(--bg-color-2) inset;
     -webkit-text-fill-color: var(--header-color);
     background-color: transparent !important;
+    outline: none;
+    border: none;
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg-color-2) inset;
+    box-shadow: 0 0 0px 1000px var(--bg-color-2) inset;
   }
 `;
 
