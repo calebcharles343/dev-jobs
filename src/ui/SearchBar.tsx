@@ -44,7 +44,7 @@ const InputContainer = styled.div`
   height: 100%;
   gap: 1.6rem;
 
-  @media (max-width: 769px) {
+  ${media.tablet} {
     gap: 2rem;
   }
 `;
@@ -52,7 +52,11 @@ const InputContainer = styled.div`
 const SubmitContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 3.4rem;
+
+  ${media.tablet} {
+    gap: 1rem;
+  }
 `;
 
 function SearchBar() {
