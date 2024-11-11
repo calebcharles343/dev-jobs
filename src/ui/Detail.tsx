@@ -250,7 +250,7 @@ function Detail() {
             <Heading headingType="h3" color="--header-color">
               {job[0].position}
             </Heading>
-            <p>So Digital inc</p>
+            <a href={job[0].website}>So Digital inc</a>
           </div>
           <LinkButton LinkButtonType="long" href={job[0].website}>
             Apply now
