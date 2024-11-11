@@ -3,7 +3,7 @@ import media from "../styles/MediaQuery";
 import { forwardRef, ReactNode } from "react";
 
 interface LinkButtonProps {
-  LinkButtonType?: "long";
+  LinkButtonType?: "long" | "linkBtn2";
   href?: string;
   children?: ReactNode;
 }
@@ -36,6 +36,24 @@ const StyledLinkButton = styled.a<Omit<LinkButtonProps, "href">>`
 
       ${media.mobile} {
         width: 100%;
+      }
+    `}
+
+  ${({ LinkButtonType }) =>
+    LinkButtonType === "linkBtn2" &&
+    css`
+      background-color: var(--btn2-bg-color);
+      color: var(--btn2-font-color);
+
+      &:hover,
+      &:active {
+        background-color: var(--btn2-bg-hover-color);
+      }
+
+      ${media.tablet} {
+        font-size: 1.6rem;
+        padding: 1rem 1.5rem;
+        min-width: 8rem;
       }
     `}
 `;

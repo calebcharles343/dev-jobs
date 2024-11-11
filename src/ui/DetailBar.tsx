@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { dataJS } from "../data/dataJS";
-import Button from "./Button";
 import { CompanyBoxProps } from "../Interfaces";
 import media from "../styles/MediaQuery";
+import LinkButton from "./LinkButton";
 
 const StyledDetailbar = styled.div`
   position: absolute;
@@ -118,7 +118,9 @@ function DetailBar() {
           <a href={`${job[0].website}`}>{job[0].company}.com</a>
         </CompanyText>
 
-        <Button ButtonType="btn2">Company Site</Button>
+        <LinkButton LinkButtonType="linkBtn2" href={job[0].website}>
+          Company Site
+        </LinkButton>
       </Company>
     </StyledDetailbar>
   );
