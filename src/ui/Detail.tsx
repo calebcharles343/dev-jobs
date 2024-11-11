@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { dataJS } from "../data/dataJS";
 import styled from "styled-components";
-import Button from "../ui/Button";
 import Heading from "../ui/Heading";
 import media from "../styles/MediaQuery";
+import LinkButton from "./LinkButton";
 
 const StyledDetail = styled.div`
   display: flex;
@@ -204,7 +204,9 @@ function Detail() {
 
               <span>{job[0].location}</span>
             </DetailTextHeader>
-            <Button ButtonType="long">Apply Now</Button>
+            <LinkButton LinkButtonType="long" href={job[0].website}>
+              Apply now
+            </LinkButton>
           </DetailHeader>
           <DetailTextContainer>
             <JobDescription>
@@ -250,7 +252,9 @@ function Detail() {
             </Heading>
             <p>So Digital inc</p>
           </div>
-          <Button ButtonType="long">Apply Now</Button>
+          <LinkButton LinkButtonType="long" href={job[0].website}>
+            Apply now
+          </LinkButton>
         </DetailfooterContainer>
       </Detailfooter>
     </>
