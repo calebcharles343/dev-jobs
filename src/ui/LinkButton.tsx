@@ -42,9 +42,11 @@ const StyledLinkButton = styled.a<Omit<LinkButtonProps, "href">>`
   ${({ LinkButtonType }) =>
     LinkButtonType === "linkBtn2" &&
     css`
-      background-color: var(--btn2-bg-color);
-      color: var(--btn2-font-color);
-
+      &:link,
+      &:visited {
+        background-color: var(--btn2-bg-color);
+        color: var(--btn2-font-color);
+      }
       &:hover,
       &:active {
         background-color: var(--btn2-bg-hover-color);
