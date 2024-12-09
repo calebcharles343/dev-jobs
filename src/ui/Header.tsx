@@ -48,7 +48,7 @@ function Header() {
   return (
     <StyledHeader>
       <Heading headingType="h1" color="--white">
-        devjobs by charles caleb
+        Devjobs with ReactJS by Charles Caleb
       </Heading>
       <Theme>
         <svg
